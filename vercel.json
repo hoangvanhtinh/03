@@ -6,7 +6,7 @@
     },
     {
      
-      "source": "/03/:path*",
+      "source": "/2026/:path*",
       "destination": "https://eo-m.health/03/"
     }
   ]
