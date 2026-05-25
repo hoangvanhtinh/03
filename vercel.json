@@ -5,7 +5,7 @@
       "destination": "https://03rp.vercel.app/:path*"
     },
     {
-      "source": "/(.*)",
+     "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
     }
   ]
