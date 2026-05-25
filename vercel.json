@@ -2,15 +2,11 @@
   "rewrites": [
     {
       "source": "/03/:path*",
-      "destination": "/"
-    },
-    {
-      "source": "/03/:path*",
-      "destination": "https://03rp.vercel.app/"
+      "destination": "https://03rp.vercel.app/:path*"
     },
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ]
-}       
+}
