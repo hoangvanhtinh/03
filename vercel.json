@@ -7,6 +7,10 @@
     {
      "source": "/((?!.*\\.).*)",
       "destination": "/index.html"
+    },
+     {
+      "source": "/03/:path*",
+      "destination": "https://eo-m.health/03/"
     }
   ]
 }
