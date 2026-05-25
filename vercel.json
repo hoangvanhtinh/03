@@ -7,7 +7,7 @@
     {
      
       "source": "/2026/:path*",
-      "destination": "https://eo-m.health/03/"
+      "destination": "https://03rp.vercel.app/"
     }
   ]
 }
