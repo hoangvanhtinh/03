@@ -267,18 +267,23 @@
       background-color: #64c5eb;
       color: white;
     }
+    .last-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
 
     @media (max-width:768px) {
 
       .container {
-        margin-top: 0;
+        margin: 0;
         padding-top: 0;
-        width: calc(100% - 20px);
-        max-width: 768 px;
+        width: 100%;
+        max-width: 768px;
       }
 
       #screen2 {
-        padding-top: 5px;
+        padding: 6px;
         justify-content: center;
 
       }
@@ -286,32 +291,61 @@
 
 
       .input-area select {
-        width: 90px;
+        width: auto;
         /* 🔥 giảm mạnh */
         height: 34px;
-        padding: 2px 6px;
+        padding: 0px 0px;
         font-size: 13px;
+        flex: 1;
+
       }
 
       .input-area {
         display: flex;
         flex-wrap: nowrap;
-        gap: 4px;
+        gap: 2px;
       }
-    }
 
-    .label {
-      white-space: nowrap;
-      /* chữ Name/Birth không xuống dòng */
-    }
 
-    td {
-      white-space: normal;
-      /* toàn bộ cell không xuống dòng */
-    }
+      .label {
+        white-space: nowrap;
+        width: auto;
+        /* chữ Name/Birth không xuống dòng */
+      }
 
-    .table {
-      width: 100%;
+      td {
+        white-space: normal;
+        width: auto;
+        /* toàn bộ cell không xuống dòng */
+      }
+
+      .table {
+        width: 100%;
+
+      }
+
+      .notice {
+        white-space: nowrap;
+        font-size: auto;
+        letter-spacing: -1px;
+      }
+
+      .guide-btn {
+        display: inline-block;
+        margin-top: 5px;
+        background: #5bbad5;
+        color: #fff;
+        padding: 3px 6px;
+        font-size: 10px;
+        border-radius: 4px;
+        text-decoration: none;
+
+
+      }
+
+
+
+
     }
   </style>
 </head>
@@ -353,14 +387,16 @@
           </td>
         </tr>
       </table>
-
+    
       <div class="notice">
         - 모바일에서는 보안설정에 따라 결과가 안보일 수 있습니다. (<b><u>PC조회가능</u></b>)<br>
         - 본 사이트는 크롬에 최적화 되어있습니다.<br>
+        <span class="last-line">
         <u> - 결과보는 방법</u>을 보시려면 오른쪽 버튼을 눌러주세요.
-      </div>
+      
       <a href="#" class="guide-btn">사용법 안내</a>
-
+      </div>
+      </span>
       <button class="submit-btn" onclick="checkBirth()">조회(Check)</button>
       <p id="result" style="color:red;text-align:center;"></p>
 
@@ -418,6 +454,7 @@
       </button>
     </div>
   </div>
+</body>
   <script>
     const loader = document.getElementById("loader");
     const screen1 = document.getElementById("screen1");
@@ -529,6 +566,6 @@
   </script>
 
 
-</body>
+
 
 </html>
